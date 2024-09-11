@@ -52,14 +52,16 @@ body {
 }
 
 .profile-picture {
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     background: linear-gradient(145deg, #ffcdd2, #e57373);
-    box-shadow: 7px 7px 15px #ffb3b3, -7px -7px 15px #ffcccc;
+    box-shadow: 0 15px 30px rgba(255, 105, 180, 0.5), 0 -15px 30px rgba(255, 182, 193, 0.3);
     display: inline-block;
-    padding: 5px;
     margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-15px); /* Efeito de sobreposição */
 }
 
 .dra-imagem {
@@ -115,9 +117,9 @@ p {
     }
 
     .profile-picture {
-        width: 70px;
-        height: 70px;
-        padding: 3px;
+        width: 100px;
+        height: 100px;
+        transform: translateY(-10px); /* Ajuste o efeito de sobreposição para telas menores */
     }
 
     h1 {
@@ -140,9 +142,9 @@ p {
     }
 
     .profile-picture {
-        width: 60px;
-        height: 60px;
-        padding: 3px;
+        width: 80px;
+        height: 80px;
+        transform: translateY(-5px); /* Ajuste o efeito de sobreposição para telas menores */
     }
 
     h1 {
