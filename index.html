@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harmonização Facial e Estética - Dra. Híngridy Moraes 💋 </title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -18,13 +13,32 @@
             <p> &#127775; Especialista em Harmonização Facial e Estética 💋</p>
             <p>&#127775; Referência em Lábios e Perfiloplastia</p>
             <p>&#127775; Técnica exclusiva HM Lips &reg;</p>
-            <a href="whatsapp://send?phone=5584998953804&text=Gostaria%20de%20mais%20informações" class="whatsapp-button" target="_blank">Fale com a Dra no WhatsApp</a>
+            <a href="#" class="whatsapp-button" onclick="openWhatsApp()">Fale com a Dra no WhatsApp</a>
         </div>
     </div>
-    <script type="text/javascript">
-    window.onload = function() {
-        window.location.href = "whatsapp://send?phone=5584998953804&text=Gostaria%20de%20mais%20informações";
-    }
-</script>
+
+    <!-- Pop-up -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Se o WhatsApp não abrir automaticamente, clique nos três pontos e escolha "Abrir no navegador".</p>
+            <button class="popup-button" onclick="closePopup()">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        function openWhatsApp() {
+            // Tenta abrir o WhatsApp
+            window.location.href = "whatsapp://send?phone=5584998953804&text=Gostaria%20de%20mais%20informações";
+            
+            // Exibe o pop-up após 3 segundos
+            setTimeout(function() {
+                document.getElementById("popup").style.display = "flex";
+            }, 3000); // 3 segundos de espera
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
 </body>
 </html>
